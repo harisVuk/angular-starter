@@ -1,0 +1,28 @@
+
+            <aside id="left-sidebar-nav">
+                <ul id="slide-out" class="side-nav fixed leftside-navigation">
+                  <li class="user-details cyan darken-2">
+                    <div class="row">
+                      <div class="col col s4 m4 l4">
+                        <i class="material-icons medium" style="color: #fff">account_circle</i>
+                      </div>
+                      <div class="col col s8 m8 l8">
+                        <a class="btn-flat dropdown-button waves-effect waves-light white-text profile-btn" href="#" data-activates="profile-dropdown-nav">User<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                        <p class="user-roal"></p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="no-padding">
+                      <ul class="collapsible" data-collapsible="accordion">
+                          <li class="bold active">
+                                <a [routerLink]="['/news']" routerLinkActive="active" class="waves-effect waves-cyan">
+                                  <i class="material-icons">assignment</i>
+                                  <span class="nav-text">News</span>
+                                </a>
+                          </li>
+                      </ul>
+                  </li>
+                </ul>
+              </aside>
+
+

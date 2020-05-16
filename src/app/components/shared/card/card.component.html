@@ -1,0 +1,17 @@
+<div class="col s12 m12 l12">
+    <div class="row">
+      <div class="col s12 m6 l6 fixed-height" *ngFor="let item of news">
+         <div class="card horizontal">
+            <div class="card-stacked">
+              <div class="card-content">
+                <p><label>Title: </label> {{ item.title }}</p>
+                <p><label>Description: </label> {{ item.desctiption }}</p>
+                <p><label>Author: </label> {{ item.user.firstName }} {{ item.user.lastName }}</p>
+                <p><label>Creation date: </label> {{ item.createdAt | date }}</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+

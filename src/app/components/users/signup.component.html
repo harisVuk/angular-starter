@@ -1,0 +1,81 @@
+<div id="login-page" class="row positioForm">
+    <div class="col s12 z-depth-4 card-panel">
+
+      <form class="login-form"
+        autocomplete="off"
+        [formGroup]="registerForm"
+        (ngSubmit)="register()" >
+
+        <div class="row">
+          <div class="input-field col s12 center">
+            <h4>Register</h4>
+            <be-error [messages]="errorMessage$ | async"></be-error>
+          </div>
+        </div>
+
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="material-icons prefix pt-5">person_outline</i>
+            <input id="firstname" formControlName="firstname" type="text" placeholder=" " />
+            <label for="firstname" class="center-align">First name</label>
+
+            <div class="error ml45" *ngIf="displayMessage.firstname">
+                {{displayMessage.firstname}}
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="material-icons prefix pt-5">person_outline</i>
+            <input id="lastname" formControlName="lastname" type="text"  placeholder=" " />
+            <label for="lastname">Last name</label>
+
+            <div class="error ml45" *ngIf="displayMessage.lastname">
+                {{displayMessage.lastname}}
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="material-icons prefix pt-5">email</i>
+            <input id="email" formControlName="email" type="email"  placeholder=" " />
+            <label for="email" class="center-align">Email</label>
+
+            <div class="error ml45" *ngIf="displayMessage.email">
+                {{displayMessage.email}}
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin">
+          <div class="input-field col s12">
+            <i class="material-icons prefix pt-5">lock_outline</i>
+            <input id="password" formControlName="password" type="password"  placeholder=" " />
+            <label for="password">Password</label>
+            
+            <div class="error ml45" *ngIf="displayMessage.password">
+                {{displayMessage.password}}
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="input-field col s12">
+            
+            <button class="btn waves-effect waves-light col s12"
+              [disabled]='!registerForm.valid'
+              type="submit">
+              Register Now
+            </button>
+
+          </div>
+          <div class="input-field col s12">
+            <p class="margin center medium-small sign-up">Already have an account? <a [routerLink]="['/auth/signin']" >Login</a></p>
+          </div>
+        </div>
+      </form>
+    </div>
+</div>
