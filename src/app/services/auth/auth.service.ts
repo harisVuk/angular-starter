@@ -12,7 +12,7 @@ import { IUserRegistration } from '../../models/user/IUserRegistration';
 })
 export class AuthService {
 
-    baseURL = 'http://localhost:25560';
+    baseURL = 'http://localhost:25560/account/';
     EXPIRES_KEY = 'expires_at';
     TOKEN_KEY = 'token';
 
@@ -49,14 +49,14 @@ export class AuthService {
 
 
     signup(user: IUserRegistration): Observable<any> {
-        return this.http.post<IUserRegistration>(this.baseURL + '/account/signup', user)
+        return this.http.post<IUserRegistration>(this.baseURL + 'signup', user)
             .pipe(
                 catchError(err => this.httpErrorHandler.handelError(err))
             );
     }
 
     singin(credentials: IUserLogin): Observable<any> {
-        return this.http.post<IUserLogin>(this.baseURL + '/account/signin', credentials)
+        return this.http.post<IUserLogin>(this.baseURL + 'signin', credentials)
             .pipe(
                 catchError(err => this.httpErrorHandler.handelError(err))
             );

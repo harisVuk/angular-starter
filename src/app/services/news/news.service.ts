@@ -10,14 +10,14 @@ import { INews } from '../../models/news/news';
 })
 export class NewsService {
 
-    baseURL = 'http://localhost:25560/news';
+    baseURL = 'http://localhost:25560/news/';
 
 
     constructor(private http: HttpClient,
         private httpErrorHandler: HttpErrorHandler) { }
 
     getNews(): Observable<INews[]> {
-        return this.http.get<INews[]>(this.baseURL)
+        return this.http.get<INews[]>(this.baseURL + 'all')
             .pipe(
                 catchError(err => this.httpErrorHandler.handelError(err))
         );

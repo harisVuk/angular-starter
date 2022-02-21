@@ -2,15 +2,15 @@ import { Action } from '@ngrx/store';
 import { IUserLogin } from '../../models/user/IUserLogin';
 
 export enum UsersActionTypes {
-      LOAD_USERS = 'LOAD_USERS',
-      LOAD_USERS_SUCCESS = 'LOAD_USERS_SUCCESS',
-      LOGIN = 'LOGIN',
-      LOGIN_SUCCESS = 'LOGIN_SUCCESS',
-      LOGIN_FAIL = 'LOGIN_FAIL',
-      REGISTER = 'REGISTAR',
-      REGISTER_SUCCESS = 'REGISTER_SUCCESS',
-      REGISTER_FAIL = 'REGISTER_FAIL',
-      CLEAR = 'CLEAR'
+      LOAD_USERS = '[User] Load Users',
+      LOAD_USERS_SUCCESS = '[User] Load users success',
+      LOGIN = '[User] Login',
+      LOGIN_SUCCESS = '[User] Login success',
+      LOGIN_FAIL = '[User] Login fail',
+      REGISTER = '[User] Register',
+      REGISTER_SUCCESS = '[User] Register success',
+      REGISTER_FAIL = '[User] Register fail',
+      CLEAR = '[User] Clear'
 }
 
 
